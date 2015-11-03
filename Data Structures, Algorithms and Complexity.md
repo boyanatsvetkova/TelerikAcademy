@@ -1,6 +1,5 @@
 1. What is the expected running time of the following C# code?
 
-
 ```c# 
         long Compute(int[] arr)
         {
@@ -51,9 +50,7 @@ The expected running time of the following code is **O(n * m)** - the for for lo
 
 ***
 
-3. (*) What is the expected running time of the following C# code?
-
-Assume the input matrix has size of n * m.
+3. (*) What is the expected running time of the following C# code? Assume the input matrix has size of n * m.
 
 ```c#
         long CalcSum(int[,] matrix, int row)
