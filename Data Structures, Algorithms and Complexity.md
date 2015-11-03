@@ -21,18 +21,27 @@ The expected running time of the following code is **O(n^2)** because the first 
 ***
 
 2. What is the expected running time of the following C# code?
-
 Assume the input matrix has size of n * m.
-long CalcCount(int[,] matrix)
-{
-    long count = 0;
-    for (int row=0; row<matrix.GetLength(0); row++)
-        if (matrix[row, 0] % 2 == 0)
-            for (int col=0; col<matrix.GetLength(1); col++)
-                if (matrix[row,col] > 0)
-                    count++;
-    return count;
-}
+
+        long CalcCount(int[,] matrix)
+        {
+            long count = 0;
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                if (matrix[row, 0] % 2 == 0)
+                {
+                    for (int col = 0; col < matrix.GetLength(1); col++)
+                    {
+                        if (matrix[row, col] > 0)
+                        {
+                            count++;
+                        }
+                    }
+                }
+            }
+
+            return count;
+        }
 
 The expected running time of the following code is **O(n * m)** - the for for loop will lways iterates through the whole row elements of the matrix whereas in the worst case if all first elements in every row are even the second for loop will be executed and will iterate over the columns of the matrix.
 
