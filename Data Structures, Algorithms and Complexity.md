@@ -61,6 +61,6 @@ Assume the input matrix has size of n * m.
             return sum;
         }
 
-Console.WriteLine(CalcSum(matrix, 0));
+        Console.WriteLine(CalcSum(matrix, 0));
 
 The expecting running time of the code in the worst case is **O(n * m)**. The outer loop will always iterate over the size of the matrix n and at the same time the if condition will always be true as long as row + 1 < matrix.GetLength(1) (size of the matrix m)
