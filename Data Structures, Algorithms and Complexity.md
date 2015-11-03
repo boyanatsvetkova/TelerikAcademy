@@ -1,19 +1,20 @@
 1. What is the expected running time of the following C# code?
 
-```long Compute(int[] arr)
-{
-    long count = 0;
-    for (int i=0; i<arr.Length; i++)
-    {
-        int start = 0, end = arr.Length-1;
-        while (start < end)
-            if (arr[start] < arr[end])
-                { start++; count++; }
-            else 
-                end--;
-    }
-    return count;
-}```
+
+        long Compute(int[] arr)
+        {
+            long count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int start = 0, end = arr.Length - 1;
+                while (start < end)
+                    if (arr[start] < arr[end])
+                    { start++; count++; }
+                    else
+                        end--;
+            }
+            return count;
+        }
 
 The expected running time of the following code is **O(n^2)** because the first for loop interates over all of the elements of the array, i.e. the size of the array - 'n'. At the same time the inner while loop once again iterates over the elements of the array as the start variable starts always from 0 and end variable starts always from the size of the array minus one and they increase or decrease with every iteration.
 
